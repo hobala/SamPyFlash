@@ -25,8 +25,8 @@ The Intel Hex file created by Atmel / Microchip studio creates record type 0x03 
 As the bootloader on the device expects only 0x05 values it would produce an error sending the 0x03 entry to the device. This error in fact occurs with the Unified Host Application. Here, we just convert them to 0x05 values but in fact it is ignored by the USB HID bootloader anyway as the vector tables in the application contains the start address already.
 
 ## Standalone Windows Binary
-The binary is provided here but was created with pyinstaller:
+A Windows binary can be created with pyinstaller:
 `pyinstaller --onefile SamPyFlash.py`
-will place an .exe file into the dist subdirectory.
+This will create an .exe file in a dist subdirectory.
 
 
